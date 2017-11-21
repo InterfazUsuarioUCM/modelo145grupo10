@@ -12,6 +12,10 @@
 			<meta name="keywords" content="IU, HTML, UCM, modelo 145, informática, web" />
 			<meta name="description" content="Diseño del modelo 145 del IRPF" />
 
+        <script type="text/javascript"    
+          src="../js/EsqueletoIf.js">
+      </script>
+
         <!-- Links -->
       <link rel="icon" href="../images/ico_sede2.gif">
         <!-- Bootstrap core CSS -->
@@ -146,9 +150,11 @@
           <div class="panel-body">
 					
   					<h4>Habiendo estado en el paro, ¿Ha tenido vd. que desplazarse al haber aceptado el puesto de trabajo actual? </h4>
-            <label class="radio-inline"><input type="radio" name="optradio">Si</label>
-            <label class="radio-inline"><input type="radio" name="optradio">No</label>
-
+            <form class="form-group" id="situacionTr1">
+            <label class="radio-inline"><input type="radio" name="desplazamiento" value="si" onchange="checkTrabajo(this)" /> Sí</label>
+            <label class="radio-inline"><input type="radio" name="desplazamiento" value="no" onchange="checkTrabajo(this)" /> No</label>
+            <p ><b id="noDespl"> </b></p>
+            </form>
 
             <form class="form" role="form">
 
@@ -195,17 +201,25 @@
 
             </form>
   					<h4>¿Ha trabajado usted 2 o más años en los últimos 5 años:</h4>
-            <label class="radio-inline"><input type="radio" name="optradio1">Si</label>
-            <label class="radio-inline"><input type="radio" name="optradio1">No</label>
+             <form class="form-group">
+            <label class="radio-inline"><input type="radio" name="trabajo2" value="si" onchange="checkTrabajo2(this)" /> Si</label>
+            <label class="radio-inline"><input type="radio" name="trabajo2" value="no" onchange="checkTrabajo2(this)" /> No</label>
+              <p ><b id="no2Años"> </b></p>
+             </form>
 
   					<h4>A efectos del cálculo del tipo de retención, ¿la he sido aplicada la reducción por irregularidad contemplada en el <a href="http://www.agenciatributaria.es/AEAT.internet/Inicio/Ayuda/Manuales__Folletos_y_Videos/Manuales_de_ayuda_a_la_presentacion/Ejercicio_2016/_Ayuda_Modelo_100/7__Cumplimentacion_IRPF__I_/7_2__Rendimientos_del_trabajo_personal/7_2_4__Reducciones_del_rendimiento_integro/7_2_4__Reducciones_del_rendimiento_integro.html">artículo 18.2 de la Ley del Impuesto</a>? </h4> 
-            <label class="radio-inline"><input type="radio" name="optradio2">Si</label>
-            <label class="radio-inline"><input type="radio" name="optradio2">No</label>
+              <form class="form-group">
+            <label class="radio-inline"><input type="radio" name="irregularidad" value="si" onchange="checkTrabajo3(this)" /> Si</label>
+            <label class="radio-inline"><input type="radio" name="irregularidad" value="no" onchange="checkTrabajo3(this)" /> No</label>
+              <p ><b id="noReten"> </b></p>
+            </form>
 
   					<h4>¿Ha aplicado dicha reducción en su autoliquidación del Impuesto sobre la Renta?</h4>
-            <label class="radio-inline"><input type="radio" name="optradio3">Si</label>
-            <label class="radio-inline"><input type="radio" name="optradio3">No</label>
-
+            <form class="form-group">
+            <label class="radio-inline"><input type="radio" name="reduccion" value="si" onchange="checkTrabajo4(this)" /> Si</label>
+            <label class="radio-inline"><input type="radio" name="reduccion" value="no" onchange="checkTrabajo4(this)"/> No</label>
+             <p ><b id="noReducc"> </b></p>
+            </form>
 				  </div>
         </div>
 

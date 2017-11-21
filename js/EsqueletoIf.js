@@ -106,12 +106,12 @@ function check1500(that){
                 var textDNI = document.createElement('input');
 
                 textDNI.setAttribute("type", "text");
-                textDNI.setAttribute("placeholder", "DNI/NIF cónyuge");
+                textDNI.setAttribute("placeholder", "DNI/NIF");
                 textDNI.setAttribute("id", "newTextDNI");
 
                 document.getElementById('situacion2').appendChild(textDNI);
                 
-                var txtPensiones = document.getElementById("1500txt").innerHTML = "Introduzca DNI/NIF de su cónyuge:";
+                var txtPensiones = document.getElementById("1500txt").innerHTML = "Introduzca DNI/NIF.";
                 
             }
 
@@ -124,4 +124,46 @@ function check1500(that){
                 }
             }
 
+}
+///----------------------------------------- TRABAJO -------------------------------------------------///
+function checkTrabajo(that) {
+
+            if (that.value === "no") {
+
+            var txtTrabajo1 = document.getElementById("noDespl").innerHTML = "No rellene nada más. Por favor, continue al punto 6: Pagos.";
+            
+            }
+
+            else {
+                    txtTrabajo1 = document.getElementById("noDespl").innerHTML = " ";
+            }
+}
+
+function checkTrabajo2(that) {
+            if (that.value === "no") {
+                var txtTrabajo2 = document.getElementById("no2Años").innerHTML = "No rellene nada más. Por favor, continue al punto 6: Pagos."; 
+            }
+            else {
+                    txtTrabajo2 = document.getElementById("no2Años").innerHTML = " ";
+            }
+}
+
+function checkTrabajo3(that) {
+            if (that.value === "no") {
+             var txtTrabajo3 = document.getElementById("noReten").innerHTML = "No rellene nada más. Por favor, continue al punto 6: Pagos.";
+            }
+            else {
+                    txtTrabajo3 = document.getElementById("noReten").innerHTML = " ";
+            }
+}
+
+function checkTrabajo4(that) {
+   
+            if (that.value === "no") {
+                var txtTrabajo4 = document.getElementById("noReducc").innerHTML = "No rellene nada más. Por favor, continue al punto 6: Pagos.";
+            }
+
+            else {
+                    txtTrabajo4 = document.getElementById("noReducc").innerHTML = " ";
+            }
 }
